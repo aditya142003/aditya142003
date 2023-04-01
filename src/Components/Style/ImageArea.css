@@ -1,0 +1,47 @@
+.mainContainer {
+  width: 100vw;
+  background-color: white;
+  display: flex;
+}
+.imageParent {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.textTag{
+  width: 1000px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+}
+
+.imageBase {
+  width: 600px;
+  position: absolute;
+  transition: all 1s ease;
+}
+
+.imageBase:nth-child(2) {
+  --mask-grad: 50%;
+  --mask-size: 103%;
+  -webkit-mask-image: linear-gradient(
+    270deg,
+    black 0 var(--mask-grad),
+    transparent 0% 100%
+  );
+  -moz-mask-image: linear-gradient(
+    270deg,
+    black 0 var(--mask-grad),
+    transparent 0% 100%
+  );
+  mask-image: linear-gradient(
+    270deg,
+    black 0 var(--mask-grad),
+    transparent 0% 100%
+  );
+  -webkit-mask-size: var(--mask-size);
+}
