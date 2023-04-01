@@ -1,7 +1,12 @@
 import React, { useState, useEffect } from "react";
 import "./Style/ImageArea.css";
-import Painted from "./Images/PaintedBg.png";
-import Original from "./Images/OriginalBg.png";
+import Painted from "./Images/Painted.png";
+import Original from "./Images/Original.png";
+import ReactIcon from "./Images/Icons/ReactIcon.png";
+import HtmlIcon from "./Images/Icons/HtmlIcon.png";
+import CssIcon from "./Images/Icons/CssIcon.png";
+import JSIcon from "./Images/Icons/JSIcon.png";
+import CIcon from "./Images/Icons/C++Icon.png";
 
 function ImageArea() {
   const [mousePos, setMousePos] = useState({});
@@ -35,7 +40,7 @@ function ImageArea() {
     ) {
       original.style.setProperty("--mask-grad", "50%");
       original.style.setProperty("--mask-size", "70%");
-    }else{
+    } else {
       original.style.setProperty("--mask-grad", "50%");
       original.style.setProperty("--mask-size", "103%");
     }
@@ -45,12 +50,25 @@ function ImageArea() {
   return (
     <>
       <div className="mainContainer">
-        <div className="textTag">FRONTEND DEVELOPER</div>
+        <div className="textTag textLeft">
+          <div>FRONTEND DEVELOPER</div>
+          <div>
+            <img src={HtmlIcon} className="icons"></img>
+            <img src={CssIcon} className="icons"></img>
+            <img src={JSIcon} className="icons"></img>
+            <img src={ReactIcon} className="icons"></img>
+          </div>
+        </div>
         <div className="imageParent ">
           <img src={Painted} className="imageBase"></img>
           <img src={Original} className="imageBase"></img>
         </div>
-        <div className="textTag textRight">PROGRAMMER</div>
+        <div className="textTag textRight">
+          <div>PROGRAMMER</div>
+          <div>
+            <img src={CIcon} className="icons"></img>
+          </div>
+        </div>
       </div>
     </>
   );

@@ -1,9 +1,21 @@
-import React from 'react'
+import React from "react";
+import "./Style/NavBar.css";
 
+console.log("Hello");
 function NavBar() {
-  return (
-    <div style={{height:"70px", width:"100vw", backgroundColor:"black"}}></div>
-  )
+  // window.onscroll = function () {
+  //   myFunction();
+  // };
+  // var navbar = document.getElementById("NavBar");
+  // var sticky = navbar.offsetTop;
+  // function myFunction() {
+  //   if (window.pageYOffset >= sticky) {
+  //     navbar.classList.add("sticky");
+  //   } else {
+  //     navbar.classList.remove("sticky");
+  //   }
+  // }
+  return <div className="NavContainer sticky" id="NavBar"></div>;
 }
 
-export default NavBar
+export default NavBar;

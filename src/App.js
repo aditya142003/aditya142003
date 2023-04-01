@@ -5,11 +5,12 @@ import ImageArea from "./Components/ImageArea";
 import "./App.css";
 
 function App() {
-  
   return (
     <>
-      <NavBar/>
-      <ImageArea/>
+      <NavBar />
+      <div className="outContainer">
+        <ImageArea />
+      </div>
     </>
   );
 }

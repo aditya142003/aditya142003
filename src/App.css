@@ -36,4 +36,9 @@
     transform: rotate(360deg);
   }
 }
-
+.outContainer{
+  width: 100vw;
+  height: 1000px;
+  background-color: #f2f0ee;
+  
+}

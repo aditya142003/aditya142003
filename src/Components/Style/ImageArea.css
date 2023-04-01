@@ -1,7 +1,14 @@
 .mainContainer {
-  width: 100vw;
+  width: 85vw;
   background-color: white;
   display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  top: 100px;
+  right: 2px;
+  box-shadow: 0 25px 50px -12px rgba(0,0,0,.25);
+  border-radius: 40px;
 }
 .imageParent {
   display: flex;
@@ -13,6 +20,7 @@
 .textTag{
   width: 1000px;
   display: flex;
+  flex-direction: column;
   position: relative;
   align-items: center;
   justify-content: center;
@@ -22,7 +30,7 @@
 .imageBase {
   width: 600px;
   position: absolute;
-  transition: all 1s ease;
+  transition: all 1.5s ease;
 }
 
 .imageBase:nth-child(2) {
@@ -44,4 +52,20 @@
     transparent 0% 100%
   );
   -webkit-mask-size: var(--mask-size);
+}
+.textLeft{
+  right: 70px;
+}
+.textLeft:hover{
+  cursor: pointer;
+}
+.textRight{
+  Left: 70px;
+}
+.textRight:hover{
+  cursor: pointer;
+}
+.icons{
+  width: 40px;
+  padding: 10px;
 }
