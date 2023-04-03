@@ -7,7 +7,7 @@
   position: relative;
   top: 100px;
   right: 2px;
-  box-shadow: 0 25px 50px -12px rgba(0,0,0,.25);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
   border-radius: 40px;
 }
 .imageParent {
@@ -17,14 +17,14 @@
   justify-content: center;
   position: relative;
 }
-.textTag{
+.textTag {
   width: 1000px;
   display: flex;
   flex-direction: column;
   position: relative;
   align-items: center;
   justify-content: center;
-  font-size: 30px;
+  font-size: 35px;
 }
 
 .imageBase {
@@ -53,19 +53,41 @@
   );
   -webkit-mask-size: var(--mask-size);
 }
-.textLeft{
+.textLeft {
   right: 70px;
 }
-.textLeft:hover{
+.textLeft:hover {
   cursor: pointer;
 }
-.textRight{
-  Left: 70px;
+.textRight {
+  left: 70px;
 }
-.textRight:hover{
+.textRight:hover {
   cursor: pointer;
 }
-.icons{
+.icons {
   width: 40px;
   padding: 10px;
+}
+.name {
+  width: 500px;
+  position: absolute;
+  top: 100px;
+  left:calc(42vw);
+  font-size: 35px;
+  z-index: 3;
+  white-space: nowrap;
+  width: 0;
+  animation: typing;
+  animation-duration: 10s;
+  animation-timing-function: steps(200, end);
+  /* animation-fill-mode: forwards; */
+}
+.hidden{
+  overflow: hidden;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
 }
