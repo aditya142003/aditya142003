@@ -1,6 +1,6 @@
 import React from "react";
 import NavBar from "./Components/NavBar";
-import ImageArea from "./Components/ImageArea";
+import MainArea from "./Components/MainArea";
 
 import "./App.css";
 
@@ -9,7 +9,7 @@ function App() {
     <>
       <NavBar />
       <div className="outContainer">
-        <ImageArea />
+        <MainArea />
       </div>
     </>
   );

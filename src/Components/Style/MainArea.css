@@ -1,0 +1,170 @@
+.mainContainer {
+  width: 85vw;
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  top: 120px;
+  right: 2px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  border-radius: 40px;
+  height: 200vh;
+}
+.imageParent {
+  display: flex;
+  height: 82vh;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.textTag {
+  width: 1000px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  font-size: 45px;
+}
+
+.imageBase {
+  width: 700px;
+  position: absolute;
+  transition: all 1.5s ease;
+}
+.imageBase:nth-child(2) {
+  --mask-grad: 50%;
+  --mask-size: 103%;
+  -webkit-mask-image: linear-gradient(
+    270deg,
+    black 0 var(--mask-grad),
+    transparent 0% 100%
+  );
+  -moz-mask-image: linear-gradient(
+    270deg,
+    black 0 var(--mask-grad),
+    transparent 0% 100%
+  );
+  mask-image: linear-gradient(
+    270deg,
+    black 0 var(--mask-grad),
+    transparent 0% 100%
+  );
+  mask-size: var(--mask-size);
+}
+.textLeft {
+  right: 70px;
+  visibility: hidden;
+}
+.aniLeft {
+  animation: leftSlide ease-out;
+  animation-duration: 2s;
+  visibility: visible;
+}
+.textLeft:hover {
+  cursor: pointer;
+}
+.textRight {
+  left: 70px;
+  visibility: hidden;
+}
+.aniright {
+  animation: rightSlide ease-out;
+  animation-duration: 2s;
+  visibility: visible;
+}
+@keyframes leftSlide {
+  0% {
+    right: 120px;
+  }
+  100% {
+    right: 70px;
+  }
+}
+@keyframes rightSlide {
+  0% {
+    left: 130px;
+  }
+  100% {
+    left: 70px;
+  }
+}
+.textRight:hover {
+  cursor: pointer;
+}
+.icons {
+  width: 40px;
+  padding: 10px;
+}
+.name {
+  width: fit-content;
+  position: relative;
+  top: 50px;
+  left: 100px;
+  z-index: 3;
+  white-space: nowrap;
+  width: 0;
+  animation: typing;
+  animation-duration: 8s;
+  animation-timing-function: steps(200, end);
+  overflow: hidden;
+  opacity: 70%;
+}
+.visible {
+  overflow: visible;
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+.nameContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+p {
+  margin: 0;
+}
+.fname {
+  font-size: 60px;
+}
+.lname {
+  font-size: 38px;
+}
+
+/* about */
+.about {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  width: 90vw;
+  margin: auto;
+}
+.aboutText{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.firstLine{
+  font-size: 30px;
+}
+.secondLine{
+  font-size: 40px;
+}
+.thirdLine{
+  font-size: 30px;
+}
+.forthLine{
+  font-size: 20px;
+}
+.aboutImage{
+  width: 200px;
+}
+.techStack{
+  font-size: 50px;
+  width: 250px;
+  height: 100px;
+}

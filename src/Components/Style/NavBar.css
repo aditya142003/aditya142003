@@ -1,7 +1,7 @@
 .NavContainer {
-  height: 70px;
+  height: 90px;
   width: 100vw;
-  background-color: black;
+  background-color: #111;
 }
 .sticky{
     position: fixed;
