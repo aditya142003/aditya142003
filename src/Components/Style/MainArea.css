@@ -136,35 +136,3 @@ p {
 }
 
 /* about */
-.about {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  width: 90vw;
-  margin: auto;
-}
-.aboutText{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.firstLine{
-  font-size: 30px;
-}
-.secondLine{
-  font-size: 40px;
-}
-.thirdLine{
-  font-size: 30px;
-}
-.forthLine{
-  font-size: 20px;
-}
-.aboutImage{
-  width: 200px;
-}
-.techStack{
-  font-size: 50px;
-  width: 250px;
-  height: 100px;
-}

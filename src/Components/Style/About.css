@@ -1,0 +1,53 @@
+a{
+  text-decoration: none;
+  color: black;
+}
+.about {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  width: 90vw;
+  margin: auto;
+}
+.aboutText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.firstLine {
+  font-size: 35px;
+}
+.secondLine {
+  font-size: 45px;
+}
+.thirdLine {
+  font-size: 35px;
+}
+.forthLine {
+  font-size: 25px;
+}
+.aboutImage {
+  width: 300px;
+  position: absolute;
+  left: 320px;
+  transition: 3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  border-radius: 40px;
+}
+.techStack {
+  font-size: 50px;
+  width: 250px;
+  height: 40vh;
+  position: absolute;
+  z-index: 3;
+  left: 0;
+  transition: 2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.city:hover{
+  cursor: pointer;
+}
