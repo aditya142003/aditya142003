@@ -1,10 +1,43 @@
-.NavContainer {
+.NavMainContainer{
   height: 90px;
   width: 100vw;
   background-color: #111;
+  color: white;
 }
-.sticky{
-    position: fixed;
-    top: 0;
-    z-index: 2;
+.NavContainer > span{
+  color: white;
+  cursor: pointer;
+}
+.NavContainer {
+  width: 90vw;
+  display: grid;
+  grid-template-columns: 0.5fr 0.2fr 0.2fr 0.2fr 0.2fr 0.3fr;
+  font-size: 25px;
+  margin: auto;
+  align-items: center;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  z-index: 2;
+}
+.NavIcon {
+  width: 110px;
+  position: relative;
+  left: 40px;
+  top: 9px;
+}
+.Social {
+  display: grid;
+  grid-template-columns: 0.5fr 0.5fr 0.5fr;
+  padding-left: 50px;
+  align-items: center;
+}
+.SocialLogo {
+  width: 45px;
+  display: block;
+  align-items: center;
+}
+.Social  :hover{
+  cursor: pointer;
 }

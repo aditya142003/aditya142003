@@ -66,7 +66,10 @@ function ImageArea() {
   }, 700);
 
   return (
-    <div style={{ width: "100vw", display: "flex", flexDirection: "row" }}>
+    <div
+      style={{ width: "100vw", display: "flex", flexDirection: "row" }}
+      id="home"
+    >
       <div className="mainContainer">
         <div style={{ display: "flex" }}>
           <div
@@ -97,7 +100,9 @@ function ImageArea() {
             </div>
           </div>
         </div>
-        <About />
+        <div>
+          <About />
+        </div>
       </div>
     </div>
   );

@@ -8,13 +8,13 @@ function About() {
   React.useEffect(() => {
     const typed = new Typed(el.current, {
       strings: [
-        "React.js ^1000",
-        "JavaScript ^1000",
-        "C++ ^1000",
-        "DSA ^1000",
-        "HTML ^1000",
-        "CSS ^1000",
-        "Git ^1000",
+        "React.js ^800",
+        "JavaScript ^800",
+        "C++ ^800",
+        "DSA ^800",
+        "HTML ^800",
+        "CSS ^800",
+        "Git ^800",
       ],
       typeSpeed: 100,
       backSpeed: 100,
@@ -45,7 +45,7 @@ function About() {
     techStack.style.setProperty("left", "0");
   }
   return (
-    <div>
+    <div >
       <p
         style={{
           fontSize: "70px",
