@@ -49,7 +49,7 @@ function About() {
       <p
         style={{
           fontSize: "70px",
-          width: "100px",
+          width: "200px",
           marginLeft: "auto",
           marginRight: "auto",
           marginTop: "30px",

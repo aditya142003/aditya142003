@@ -1,0 +1,10 @@
+.projectContainer{
+    display: flex;
+    /* grid-template-columns: 1.5fr 1fr; */
+    padding: 10px;
+    width: 70vw;
+    margin: auto;
+    background-color: white;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.10);
+    border-radius: 40px;
+}

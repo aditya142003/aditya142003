@@ -9,6 +9,7 @@ import CssIcon from "./Images/Icons/CssIcon.png";
 import JSIcon from "./Images/Icons/JSIcon.png";
 import CIcon from "./Images/Icons/C++Icon.png";
 import About from "./About";
+import Project from "./Project";
 
 function ImageArea() {
   const [mousePos, setMousePos] = useState({});
@@ -102,6 +103,9 @@ function ImageArea() {
         </div>
         <div>
           <About />
+        </div>
+        <div>
+          <Project />
         </div>
       </div>
     </div>
