@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "./Style/Project.css";
 import axios from "axios";
+import Github from "./Images/Icons/Github.png"
+import Live from "./Images/Icons/Live.png"
 
 function Project() {
   const [ProjectFetched, setProjectFetched] = useState([]);
@@ -14,38 +16,37 @@ function Project() {
     <div>
       <p
         style={{
-          fontSize: "70px",
-          width: "240px",
+          fontSize: "50px",
+          width: "120px",
           marginLeft: "auto",
           marginRight: "auto",
-          marginTop: "30px",
+          marginTop: "70px",
           marginBottom: "30px",
         }}
       >
         .projects
       </p>
-
       {ProjectFetched.map((user) => (
-        <div>
+        <div className="projectContainer">
           <img
             src={`https://drive.google.com/uc?export=view&id=${user.imageLink}`}
             alt="drive image"
-            style={{ width: "500px" }}
+            className="projectImage"
           />
-          <div>
+          <div style={{margin:"15px"}}>
             <h3>{user.title}</h3>
-            {user.description.slice(0, 250) + "..."}
+            {user.description.slice(0, 295) + "..."}
             <div>
               {user.techStack.split(",").map((tech) => {
-                return <span style={{ padding: "10px" }}>{tech}</span>;
+                return <button className="projectTech">{tech}</button>;
               })}
             </div>
             <div>
-              <span>
-                <a href={user.repoLink}>Code</a>
+              <span className="projectButton">
+                <a href={user.repoLink} target="_blank">Code <img src={Github} style={{width:"25px"}}/></a>
               </span>
-              <span>
-                <a href={user.link}>Live Demo</a>
+              <span className="projectButton">
+                <a href={user.link}  target="_blank">Live Demo <img src={Live} style={{width:"25px"}}/></a>
               </span>
             </div>
           </div>

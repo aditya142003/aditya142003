@@ -48,8 +48,8 @@ function About() {
     <div >
       <p
         style={{
-          fontSize: "70px",
-          width: "200px",
+          fontSize: "50px",
+          width: "120px",
           marginLeft: "auto",
           marginRight: "auto",
           marginTop: "30px",
