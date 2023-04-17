@@ -45,16 +45,17 @@ function About() {
     techStack.style.setProperty("left", "0");
   }
   return (
-    <div >
+    <div style={{height:"70vh"}} >
       <p
         style={{
-          fontSize: "50px",
-          width: "120px",
+          fontSize: "65px",
+          width: "200px",
           marginLeft: "auto",
           marginRight: "auto",
-          marginTop: "30px",
+          marginTop: "60px",
           marginBottom: "30px",
         }}
+        className="headingHighlighter"
       >
         .about
       </p>
@@ -65,7 +66,7 @@ function About() {
               {/* prettier-ignore */}
               <p> Hi! I'm Aditya frontend web developer </p>
               {/* prettier-ignore */}
-              <p>born in <span onMouseEnter={handleUdaipur} onMouseLeave={handleLeaveU} className="city" ><a href="https://www.tourism.rajasthan.gov.in/udaipur.html" target="_blank">Udaipur</a></span>, based in <span onMouseEnter={handleJaipur} onMouseLeave={handleLeaveJ} className="city"><a href="https://www.tourism.rajasthan.gov.in/jaipur.html" target="_blank">Jaipur</a></span>, India </p>
+              <p>born in <span onMouseEnter={handleUdaipur} onMouseLeave={handleLeaveU} className="city textHighlighter" ><a href="https://www.tourism.rajasthan.gov.in/udaipur.html" target="_blank">Udaipur</a></span>, based in <span onMouseEnter={handleJaipur} onMouseLeave={handleLeaveJ} className="city textHighlighter"><a href="https://www.tourism.rajasthan.gov.in/jaipur.html" target="_blank">Jaipur</a></span>, India </p>
             </pre>
           </p>
           <pre>

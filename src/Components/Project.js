@@ -13,16 +13,17 @@ function Project() {
     });
   }, []);
   return (
-    <div>
+    <div style={{height:"70vh"}}>
       <p
         style={{
-          fontSize: "50px",
-          width: "120px",
+          fontSize: "65px",
+          width: "250px",
           marginLeft: "auto",
           marginRight: "auto",
-          marginTop: "70px",
+          marginTop: "60px",
           marginBottom: "30px",
         }}
+        className="headingHighlighter"
       >
         .projects
       </p>

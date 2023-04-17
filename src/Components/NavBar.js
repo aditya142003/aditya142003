@@ -16,6 +16,9 @@ function NavBar() {
   function scrollingProject() {
     window.scrollTo(0, 1230);
   }
+  function scrollingContact() {
+    window.scrollTo(0, 1900);
+  }
   return (
     <div className="sticky NavMainContainer">
       <div className="NavContainer ">
@@ -25,7 +28,7 @@ function NavBar() {
         <span onClick={scrollingHome}>Home</span>
         <span onClick={scrollingAbout}>About</span>
         <span onClick={scrollingProject}>Projects</span>
-        <span>Contact</span>
+        <span onClick={scrollingContact}>Contact</span>
         <div className="Social">
           <span>
             <a

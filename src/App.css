@@ -1,6 +1,5 @@
 .App {
   text-align: center;
-
 }
 
 .App-logo {
@@ -37,7 +36,12 @@
     transform: rotate(360deg);
   }
 }
-.outContainer{
+.outContainer {
   width: 100vw;
-  height: 300vh;
+}
+.textHighlighter {
+  background: linear-gradient(to bottom, transparent 40%, #fc894121 60%);
+}
+.headingHighlighter {
+  background: linear-gradient(to bottom, transparent 60%, #fce041 40%);
 }

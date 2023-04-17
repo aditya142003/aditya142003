@@ -1,0 +1,63 @@
+.contactHeading {
+  width: fit-content;
+  margin: auto;
+}
+.contactHeading > p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: "270px",
+}
+input {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  font-size: 20px;
+}
+input:focus {
+  outline: none;
+}
+.inputArea {
+  padding-top: 25px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.messageInput {
+  width: 580px;
+  padding-top: 10px;
+  text-align: center;
+}
+.inputText {
+  display: flex;
+  justify-content: center;
+  font-size: 25px;
+}
+.contactFirst {
+  font-size: 50px;
+  color: rgb(78, 78, 233);
+  margin: 0;
+  padding-left: 87px;
+}
+.contactSecond {
+  font-size: 26px;
+  margin-top: 10px;
+}
+.contactThird {
+  display: flex;
+  margin: 10px;
+}
+.shoot {
+  width: 200px;
+  height: 40px;
+  margin-top: 40px;
+  font-size: 20px;
+  align-items: center;
+  justify-content: center;
+  background-color: hwb(0 97% 2%);
+  font-weight: 700;
+}
+.shoot:hover {
+  cursor: pointer;
+  background-color: rgb(176, 176, 252);
+  transition: all 1s ease;
+}
