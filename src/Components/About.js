@@ -46,6 +46,7 @@ function About() {
   }
   return (
     <div style={{height:"70vh"}} >
+    <div id="about-href" className="section-href"></div>
       <p
         style={{
           fontSize: "65px",

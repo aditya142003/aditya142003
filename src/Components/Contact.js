@@ -17,6 +17,7 @@ function Contact() {
       email: `${Email}`,
       message: `${Message}`,
     });
+    alert("Message sent!")
   };
 
   return (
