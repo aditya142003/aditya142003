@@ -1,11 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import NavBar from "./Components/NavBar";
 import MainArea from "./Components/MainArea";
 import CreateProject from "./Components/CreateProject";
 import AuthPage from "./Components/AuthPage";
 import Footer from "./Components/Footer";
 import { Routes, Route } from "react-router-dom";
-
 import "./App.css";
 
 function App() {

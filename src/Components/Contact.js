@@ -1,41 +1,42 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
 import "./Style/Contact.css";
+import { ref, set } from "firebase/database";
+import { db } from "./Firebase/Config";
+import { uid } from "uid";
 
 function Contact() {
   const [Name, setName] = useState();
   const [Email, setEmail] = useState();
   const [Message, setMessage] = useState();
 
-  function submit() {
-    axios({
-      method: "post",
-      url: "http://localhost:3000/Contact",
-      headers: {},
-      data: {
-        name: `${Name}`,
-        email: `${Email}`,
-        message: `${Message}`,
-      },
-    }).then((response) => {
-      console.log(response);
+  const submit = (e) => {
+    e.preventDefault();
+    const id = `contact${uid()}`;
+    set(ref(db, `/${id}`), {
+      name: `${Name}`,
+      email: `${Email}`,
+      message: `${Message}`,
     });
-  }
+  };
 
   return (
-    <div>
+    <div style={{
+      marginTop: "100px",
+      paddingBottom: "100px"
+    }}>
+     <div id="contact-href" className="section-href"></div>
       <p
         style={{
           fontSize: "65px",
           width: "230px",
           marginLeft: "auto",
           marginRight: "auto",
-          marginTop: "30px",
           marginBottom: "30px",
+          marginTop: "50px"
         }}
         className="headingHighlighter"
       >
-      .contact
+        .contact
       </p>
       <div className="contactHeading">
         <h1 className="contactFirst">Send me a message!</h1>

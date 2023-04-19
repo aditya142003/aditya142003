@@ -1,5 +1,7 @@
 import React, { useState } from "react";
-import axios from "axios";
+import { ref, set } from "firebase/database";
+import { db } from "./Firebase/Config";
+import { uid } from "uid";
 
 function CreateProject() {
   const [Title, setTitle] = useState();
@@ -9,23 +11,20 @@ function CreateProject() {
   const [RepoLink, setRepoLink] = useState();
   const [TechStack, setTechStack] = useState();
 
-  function createPost() {
-    axios({
-      method: "post",
-      url: "http://localhost:3000/CreateProject",
-      headers: {},
-      data: {
-        title: `${Title}`,
-        description: `${Description}`,
-        link: `${Link}`,
-        imageLink: `${ImageLink}`,
-        repoLink: `${RepoLink}`,
-        techStack: `${TechStack}`,
-      },
-    }).then((response) => {
-      console.log(response);
+  const createPost = (e) => {
+    e.preventDefault();
+    const id = `project${uid()}`;
+    set(ref(db, `/${id}`), {
+      title: `${Title}`,
+      description: `${Description}`,
+      link: `${Link}`,
+      imageLink: `${ImageLink}`,
+      repoLink: `${RepoLink}`,
+      techStack: `${TechStack}`,
+      type:"Project"
     });
-  }
+  };
+
   return (
     <div>
       <form>

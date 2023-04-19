@@ -45,3 +45,10 @@
 .headingHighlighter {
   background: linear-gradient(to bottom, transparent 60%, #fce041 40%);
 }
+.section-href {
+  display: block;
+  width: 100px;
+  height: 2px;
+  position: relative;
+  top: -50px;
+}

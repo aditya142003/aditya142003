@@ -27,8 +27,8 @@ function NavBar() {
         </span>
         <span onClick={scrollingHome}>Home</span>
         <span onClick={scrollingAbout}>About</span>
-        <span onClick={scrollingProject}>Projects</span>
-        <span onClick={scrollingContact}>Contact</span>
+        <a href="#project-href">Projects</a>
+        <a href="#contact-href">Contact</a>
         <div className="Social">
           <span>
             <a

@@ -1,19 +1,48 @@
 import React, { useEffect, useState } from "react";
 import "./Style/Project.css";
-import axios from "axios";
-import Github from "./Images/Icons/Github.png"
-import Live from "./Images/Icons/Live.png"
+import Github from "./Images/Icons/Github.png";
+import Live from "./Images/Icons/Live.png";
+import { onValue, ref } from "firebase/database";
+import { db } from "./Firebase/Config";
 
 function Project() {
   const [ProjectFetched, setProjectFetched] = useState([]);
+
+  // useEffect(() => {
+  //   onValue(ref(db), (snapshot) => {
+  //     if (snapshot.val()) {
+  //       const values = Object.values(snapshot.val());
+  //       values.forEach((data, index) => {
+  //         if (data.type == "Project") {
+  //           setProjectFetched((oldArray) => [...oldArray, data]);
+  //         }
+  //       });
+  //     }
+  //   });
+  // }, []);
+
   useEffect(() => {
-    axios.get("http://localhost:3000/FetchProject").then((res) => {
-      setProjectFetched(res.data);
-      console.log(res.data);
-    });
+    getProjects();
   }, []);
+
+  const getProjects = async () => {
+    onValue(ref(db), (snapshot) => {
+      if (snapshot.val()) {
+        const values = Object.values(snapshot.val());
+        // console.log(values);
+        let projects = [];
+        values.map((data) => {
+          if (data.type == "Project") projects.push(data);
+        });
+        setProjectFetched(projects);
+      }
+    });
+  };
+  console.log(ProjectFetched);
+
   return (
-    <div style={{height:"70vh"}}>
+    <div>
+      <div id="project-href" className="section-href"></div>
       <p
         style={{
           fontSize: "65px",
@@ -34,7 +63,7 @@ function Project() {
             alt="drive image"
             className="projectImage"
           />
-          <div style={{margin:"15px"}}>
+          <div style={{ margin: "15px" }}>
             <h3>{user.title}</h3>
             {user.description.slice(0, 295) + "..."}
             <div>
@@ -44,10 +73,14 @@ function Project() {
             </div>
             <div>
               <span className="projectButton">
-                <a href={user.repoLink} target="_blank">Code <img src={Github} style={{width:"25px"}}/></a>
+                <a href={user.repoLink} target="_blank">
+                  Code <img src={Github} style={{ width: "25px" }} />
+                </a>
               </span>
               <span className="projectButton">
-                <a href={user.link}  target="_blank">Live Demo <img src={Live} style={{width:"25px"}}/></a>
+                <a href={user.link} target="_blank">
+                  Live Demo <img src={Live} style={{ width: "25px" }} />
+                </a>
               </span>
             </div>
           </div>
