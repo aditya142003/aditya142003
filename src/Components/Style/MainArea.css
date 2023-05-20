@@ -135,3 +135,8 @@ p {
 }
 
 /* about */
+/* @media screen and (max-width: 600px) {
+  .mainContainer {
+    background-color: blue;
+  }
+} */

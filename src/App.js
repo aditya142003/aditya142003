@@ -9,21 +9,19 @@ import "./App.css";
 
 function App() {
   return (
-    <div>
+    <div >
       <Routes>
         <Route
           path="/"
           element={
             <div>
-              <NavBar /> <MainArea /> <Footer/>
+              <NavBar /> <MainArea /> <Footer />
             </div>
           }
         ></Route>
         <Route path="/AuthPage" element={<AuthPage />}></Route>
         <Route path="/CreateProject" element={<CreateProject />}></Route>
       </Routes>
-      <div className="outContainer"></div>
-      
     </div>
   );
 }

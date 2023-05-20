@@ -16,10 +16,10 @@ function NavBar() {
         <span>
           <img className="NavIcon" src={NavLogo} onClick={scrollingHome}></img>
         </span>
-        <a onClick={scrollingHome}>Home</a>
-        <a href="#about-href">About</a>
-        <a href="#project-href">Projects</a>
-        <a href="#contact-href">Contact</a>
+        <div onClick={scrollingHome}>Home</div>
+        <div href="#about-href">About</div>
+        <div href="#project-href">Projects</div>
+        <div href="#contact-href">Contact</div>
         <div className="Social">
           <span>
             <a href="https://github.com/aditya142003/" target="_blank">
