@@ -15,7 +15,8 @@ function App() {
           path="/"
           element={
             <div>
-              <NavBar /> <MainArea /> <Footer />
+              <NavBar /> 
+              <MainArea /> <Footer />
             </div>
           }
         ></Route>

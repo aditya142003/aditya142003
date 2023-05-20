@@ -15,27 +15,37 @@ function NavBar() {
     if (active && window.screen.width < 600) {
       setactive(false);
       document.getElementById("NavMainContainer").style.height = "100vh";
+      document.getElementById("NavMainContainer").style.paddingTop = "50px";
+      document.getElementById("NavContainer").style.display = "block";
     } else {
       setactive(true);
       document.getElementById("NavMainContainer").style.height = "10vh";
+      document.getElementById("NavMainContainer").style.paddingTop = "0px";
+      document.getElementById("NavContainer").style.display = "flex";
     }
   }
   return (
     <div className="sticky NavMainContainer" id="NavMainContainer">
-      <div className="NavContainer ">
-        <span>
-          <img className="NavIcon" src={NavLogo} onClick={scrollingHome}></img>
-        </span>
-        {(active && window.screen.width < 600 )? (
-          <span>
-            <img className="MenuIcon" src={Menu} onClick={handleActive}></img>
-          </span>
-        ) : (
+      <div className="NavContainer" id="NavContainer">
+        <img className="NavIcon" src={NavLogo} onClick={scrollingHome}></img>
+        {active && window.screen.width < 600 ? (
           <>
-            <a onClick={handleActive} href="#home-href">Home</a>
-            <a onClick={handleActive} href="#about-href">About</a>
-            <a onClick={handleActive} href="#project-href">Projects</a>
-            <a onClick={handleActive} href="#contact-href">Contact</a>
+            <img className="MenuIcon" src={Menu} onClick={handleActive}></img>
+          </>
+        ) : (
+          <div>
+            <a onClick={handleActive} href="#home-href">
+              Home
+            </a>
+            <a onClick={handleActive} href="#about-href">
+              About
+            </a>
+            <a onClick={handleActive} href="#project-href">
+              Projects
+            </a>
+            <a onClick={handleActive} href="#contact-href">
+              Contact
+            </a>
             <div className="Social">
               <span>
                 <a href="https://github.com/aditya142003/" target="_blank">
@@ -59,7 +69,7 @@ function NavBar() {
                 </a>
               </span>
             </div>
-          </>
+          </div>
         )}
       </div>
     </div>

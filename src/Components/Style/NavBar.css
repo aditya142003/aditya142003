@@ -47,24 +47,43 @@
     width: 100vw;
     background-color: #111;
     color: white;
+    padding-top: 0px;
   }
-  .NavContainer > a {
+  .NavContainer > div > a {
     color: white;
     cursor: pointer;
+    display: block !important;
+  }
+  .NavContainer > div {
+    justify-content: center;
   }
   .NavContainer {
     width: 90vw;
-    display: block;
+    height: 10vh;
+    display: flex;
     font-size: 25px;
     text-align: center;
+    justify-content: space-between;
   }
-  .NavContainer > div {
-    padding-top: 60px;
+  .NavContainer > div > a {
+    padding: 30px;
   }
   .NavIcon {
-    width: 110px;
+    width: 80px;
   }
-  .MenuIcon{
-    width: 50px;
+  .MenuIcon {
+    width: 40px;
+  }
+  .Social {
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr 0.5fr;
+    padding: 30px;
+  }
+  .SocialLogo {
+    display: block;
+    margin: auto;
+  }
+  .Social :hover {
+    cursor: pointer;
   }
 }
