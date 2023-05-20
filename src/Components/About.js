@@ -45,21 +45,9 @@ function About() {
     techStack.style.setProperty("left", "0");
   }
   return (
-    <div style={{ height: "70vh" }}>
+    <div>
       <div id="about-href" className="section-href"></div>
-      <p
-        style={{
-          fontSize: "65px",
-          width: "200px",
-          marginLeft: "auto",
-          marginRight: "auto",
-          marginTop: "60px",
-          marginBottom: "30px",
-        }}
-        className="headingHighlighter"
-      >
-        .about
-      </p>
+      <p className="headingHighlighter aboutWord">.about</p>
       <div className="about">
         <div className="aboutText">
           <p className="firstLine">
@@ -100,6 +88,7 @@ function About() {
           <div className="techStack" id="techStack">
             <span ref={el} />
           </div>
+
           <div style={{ height: "25vh" }}>
             <img src={Udaipur} id="aboutImageU" className="aboutImage"></img>
             <img src={Jaipur} id="aboutImageJ" className="aboutImage"></img>

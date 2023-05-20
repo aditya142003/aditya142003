@@ -125,9 +125,11 @@ function ImageArea() {
       ) : (
         <></>
       )}
+      {window.screen.width < 600 ? <hr width="350px" /> : <></>}
       <div>
         <About />
       </div>
+      {window.screen.width < 600 ? <hr width="350px" /> : <></>}
       <div>
         <Project />
       </div>
