@@ -133,10 +133,76 @@ p {
 .lname {
   font-size: 38px;
 }
-
-/* about */
-/* @media screen and (max-width: 600px) {
-  .mainContainer {
-    background-color: blue;
+@media screen and (max-width: 600px) {
+  .imageBase {
+    width: 250px;
+    position: absolute;
+    transition: all 1.5s ease;
   }
-} */
+  .mainContainer {
+    width: 100vw;
+    background-color: hwb(0 100% 0%);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+    overflow: hidden;
+    position: relative;
+    top: 70px;
+  }
+  .imageParent {
+    display: flex;
+    height: 35vh;
+  }
+  .textTag {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+  }
+  .textLeft {
+    right: 5vw;
+    visibility: hidden;
+  }
+  .aniLeft {
+    animation: leftSlide ease-out;
+    animation-duration: 2s;
+    visibility: visible;
+  }
+  .textLeft:hover {
+    cursor: pointer;
+  }
+  .textRight {
+    left: 7vw;
+    visibility: hidden;
+  }
+  .aniright {
+    animation: rightSlide ease-out;
+    animation-duration: 2s;
+    visibility: visible;
+  }
+  @keyframes leftSlide {
+    0% {
+      right: 10vw;
+    }
+    100% {
+      right: 5vw;
+    }
+  }
+  @keyframes rightSlide {
+    0% {
+      left: 10vw;
+    }
+    100% {
+      left: 7wv;
+    }
+  }
+  .textRight:hover {
+    cursor: pointer;
+  }
+  .icons {
+    width: 25px;
+    padding: 2px;
+  }
+}

@@ -8,9 +8,6 @@ import Menu from "./Images/Menu.png";
 
 function NavBar() {
   const [active, setactive] = useState(true);
-  function scrollingHome() {
-    window.scrollTo(0, 0);
-  }
   function handleActive() {
     if (active && window.screen.width < 600) {
       setactive(false);
@@ -24,16 +21,24 @@ function NavBar() {
       document.getElementById("NavContainer").style.display = "flex";
     }
   }
+  function handleLogo() {
+    if (!active && window.screen.width < 600) {
+      setactive(true);
+      document.getElementById("NavMainContainer").style.height = "10vh";
+      document.getElementById("NavMainContainer").style.paddingTop = "0px";
+      document.getElementById("NavContainer").style.display = "flex";
+    }
+  }
   return (
     <div className="sticky NavMainContainer" id="NavMainContainer">
       <div className="NavContainer" id="NavContainer">
-        <img className="NavIcon" src={NavLogo} onClick={scrollingHome}></img>
+        <img className="NavIcon" src={NavLogo} onClick={handleLogo}></img>
         {active && window.screen.width < 600 ? (
           <>
             <img className="MenuIcon" src={Menu} onClick={handleActive}></img>
           </>
         ) : (
-          <div>
+          <div className="rightBar">
             <a onClick={handleActive} href="#home-href">
               Home
             </a>

@@ -1,20 +1,25 @@
 .NavMainContainer {
-  height: 90px;
+  height: 80px;
   width: 100vw;
   background-color: #111;
   color: white;
 }
-.NavContainer > a {
+.NavContainer > div > a {
+  color: white;
+  cursor: pointer;
+}
+.NavContainer > div {
   color: white;
   cursor: pointer;
 }
 .NavContainer {
-  width: 90vw;
   display: grid;
-  grid-template-columns: 0.5fr 0.2fr 0.2fr 0.2fr 0.2fr 0.3fr;
-  font-size: 25px;
+  grid-template-columns: 0.3fr 1fr;
+  font-size: 28px;
   margin: auto;
   align-items: center;
+  margin-left: 30px;
+  margin-right: 30px;
 }
 .sticky {
   position: fixed;
@@ -23,9 +28,6 @@
 }
 .NavIcon {
   width: 110px;
-  /* position: relative;
-  left: 40px;
-  top: 9px; */
 }
 .Social {
   display: grid;
@@ -40,6 +42,15 @@
 }
 .Social :hover {
   cursor: pointer;
+}
+.rightBar {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+.rightBar > div{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
 }
 @media screen and (max-width: 600px) {
   .NavMainContainer {
@@ -73,6 +84,7 @@
   }
   .MenuIcon {
     width: 40px;
+    padding-right: 15px;
   }
   .Social {
     display: grid;
@@ -85,5 +97,8 @@
   }
   .Social :hover {
     cursor: pointer;
+  }
+  .rightBar {
+    display: block;
   }
 }

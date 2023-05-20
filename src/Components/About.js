@@ -45,8 +45,8 @@ function About() {
     techStack.style.setProperty("left", "0");
   }
   return (
-    <div style={{height:"70vh"}} >
-    <div id="about-href" className="section-href"></div>
+    <div style={{ height: "70vh" }}>
+      <div id="about-href" className="section-href"></div>
       <p
         style={{
           fontSize: "65px",

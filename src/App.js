@@ -9,13 +9,13 @@ import "./App.css";
 
 function App() {
   return (
-    <div >
+    <div>
       <Routes>
         <Route
           path="/"
           element={
             <div>
-              <NavBar /> 
+              <NavBar />
               <MainArea /> <Footer />
             </div>
           }

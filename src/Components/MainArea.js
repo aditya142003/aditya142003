@@ -8,6 +8,8 @@ import HtmlIcon from "./Images/Icons/HtmlIcon.png";
 import CssIcon from "./Images/Icons/CssIcon.png";
 import JSIcon from "./Images/Icons/JSIcon.png";
 import CIcon from "./Images/Icons/C++Icon.png";
+import MYSQL from "./Images/Icons/MYSQL.png";
+import Node from "./Images/Icons/Node.png";
 import About from "./About";
 import Project from "./Project";
 import Contact from "./Contact";
@@ -68,20 +70,25 @@ function ImageArea() {
   }, 700);
 
   return (
-    <div className="mainContainer"  id="home-href" >
+    <div className="mainContainer" id="home-href">
       <div style={{ display: "flex" }}>
         <div
           id="textLeft"
           className="textTag textLeft"
           style={{ opacity: `${opacityLeft}%`, transition: "0.7s ease" }}
         >
-          <div>frontend developer</div>
-          <div>
-            <img src={HtmlIcon} className="icons"></img>
-            <img src={CssIcon} className="icons"></img>
-            <img src={JSIcon} className="icons"></img>
-            <img src={ReactIcon} className="icons"></img>
-          </div>
+          <div>&lt;developer&gt;</div>
+          {window.screen.width < 600 ? (
+            <></>
+          ) : (
+            <div>
+              <img src={HtmlIcon} className="icons"></img>
+              <img src={CssIcon} className="icons"></img>
+              <img src={JSIcon} className="icons"></img>
+              <img src={ReactIcon} className="icons"></img>
+              <img src={Node} className="icons"></img>
+            </div>
+          )}
         </div>
         <div className="imageParent ">
           <img src={Painted} className="imageBase"></img>
@@ -92,12 +99,32 @@ function ImageArea() {
           className="textTag textRight"
           style={{ opacity: `${opacityRight}%`, transition: "0.7s ease" }}
         >
-          <div>&lt;programmer&gt;</div>
+          <div>&#123;programmer&#125;</div>
           <div>
-            <img src={CIcon} className="icons"></img>
+            {window.screen.width < 600 ? (
+              <></>
+            ) : (
+              <div>
+                <img src={CIcon} className="icons"></img>
+                <img src={MYSQL} className="icons"></img>
+              </div>
+            )}
           </div>
         </div>
       </div>
+      {window.screen.width < 600 ? (
+        <div style={{ margin: "auto", width: "50vw" }}>
+          <img src={HtmlIcon} className="icons"></img>
+          <img src={CssIcon} className="icons"></img>
+          <img src={JSIcon} className="icons"></img>
+          <img src={ReactIcon} className="icons"></img>
+          <img src={CIcon} className="icons"></img>
+          <img src={MYSQL} className="icons"></img>
+          <img src={Node} className="icons"></img>
+        </div>
+      ) : (
+        <></>
+      )}
       <div>
         <About />
       </div>
