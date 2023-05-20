@@ -43,7 +43,7 @@
 }
 @media screen and (max-width: 600px) {
   .NavMainContainer {
-    height: 100vh;
+    height: 10vh;
     width: 100vw;
     background-color: #111;
     color: white;
@@ -63,5 +63,8 @@
   }
   .NavIcon {
     width: 110px;
+  }
+  .MenuIcon{
+    width: 50px;
   }
 }

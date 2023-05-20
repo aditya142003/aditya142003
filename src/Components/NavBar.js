@@ -1,48 +1,66 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Style/NavBar.css";
 import NavLogo from "./Images/NavLogo.png";
 import Instagram from "./Images/Icons/Instagram.png";
 import LinkedIn from "./Images/Icons/LinkedIn.png";
 import Github from "./Images/Icons/Github1.png";
+import Menu from "./Images/Menu.png";
 
-console.log("Hello");
 function NavBar() {
+  const [active, setactive] = useState(true);
   function scrollingHome() {
     window.scrollTo(0, 0);
   }
+  function handleActive() {
+    if (active && window.screen.width < 600) {
+      setactive(false);
+      document.getElementById("NavMainContainer").style.height = "100vh";
+    } else {
+      setactive(true);
+      document.getElementById("NavMainContainer").style.height = "10vh";
+    }
+  }
   return (
-    <div className="sticky NavMainContainer">
+    <div className="sticky NavMainContainer" id="NavMainContainer">
       <div className="NavContainer ">
         <span>
           <img className="NavIcon" src={NavLogo} onClick={scrollingHome}></img>
         </span>
-        <div onClick={scrollingHome}>Home</div>
-        <div href="#about-href">About</div>
-        <div href="#project-href">Projects</div>
-        <div href="#contact-href">Contact</div>
-        <div className="Social">
+        {(active && window.screen.width < 600 )? (
           <span>
-            <a href="https://github.com/aditya142003/" target="_blank">
-              <img className="SocialLogo" src={Github}></img>
-            </a>
+            <img className="MenuIcon" src={Menu} onClick={handleActive}></img>
           </span>
-          <span>
-            <a
-              href="https://www.instagram.com/aditya.bhatnagar__/"
-              target="_blank"
-            >
-              <img className="SocialLogo" src={Instagram}></img>
-            </a>
-          </span>
-          <span>
-            <a
-              href="https://www.linkedin.com/in/aditya-bhatnagar-949a05263/"
-              target="_blank"
-            >
-              <img className="SocialLogo" src={LinkedIn}></img>
-            </a>
-          </span>
-        </div>
+        ) : (
+          <>
+            <a onClick={handleActive} href="#home-href">Home</a>
+            <a onClick={handleActive} href="#about-href">About</a>
+            <a onClick={handleActive} href="#project-href">Projects</a>
+            <a onClick={handleActive} href="#contact-href">Contact</a>
+            <div className="Social">
+              <span>
+                <a href="https://github.com/aditya142003/" target="_blank">
+                  <img className="SocialLogo" src={Github}></img>
+                </a>
+              </span>
+              <span>
+                <a
+                  href="https://www.instagram.com/aditya.bhatnagar__/"
+                  target="_blank"
+                >
+                  <img className="SocialLogo" src={Instagram}></img>
+                </a>
+              </span>
+              <span>
+                <a
+                  href="https://www.linkedin.com/in/aditya-bhatnagar-949a05263/"
+                  target="_blank"
+                >
+                  <img className="SocialLogo" src={LinkedIn}></img>
+                </a>
+              </span>
+            </div>
+          </>
+        )}
       </div>
     </div>
   );

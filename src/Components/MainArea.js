@@ -68,7 +68,7 @@ function ImageArea() {
   }, 700);
 
   return (
-    <div className="mainContainer">
+    <div className="mainContainer"  id="home-href" >
       <div style={{ display: "flex" }}>
         <div
           id="textLeft"
