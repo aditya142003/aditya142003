@@ -14,7 +14,7 @@ function NavBar() {
       document.getElementById("NavMainContainer").style.height = "100vh";
       document.getElementById("NavMainContainer").style.paddingTop = "50px";
       document.getElementById("NavContainer").style.display = "block";
-    } else {
+    } else if (!active && window.screen.width < 600) {
       setactive(true);
       document.getElementById("NavMainContainer").style.height = "10vh";
       document.getElementById("NavMainContainer").style.paddingTop = "0px";
@@ -22,11 +22,11 @@ function NavBar() {
     }
   }
   function handleLogo() {
-    if (!active && window.screen.width < 600) {
-      setactive(true);
-      document.getElementById("NavMainContainer").style.height = "10vh";
-      document.getElementById("NavMainContainer").style.paddingTop = "0px";
-      document.getElementById("NavContainer").style.display = "flex";
+    if (active && window.screen.width < 600) {
+      setactive(false);
+      document.getElementById("NavMainContainer").style.height = "100vh";
+      document.getElementById("NavMainContainer").style.paddingTop = "50px";
+      document.getElementById("NavContainer").style.display = "block";
     }
   }
   return (

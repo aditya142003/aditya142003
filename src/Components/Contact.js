@@ -17,28 +17,13 @@ function Contact() {
       email: `${Email}`,
       message: `${Message}`,
     });
-    alert("Message sent!")
+    alert("Message sent!");
   };
 
   return (
-    <div style={{
-      marginTop: "100px",
-      paddingBottom: "100px"
-    }}>
-     <div id="contact-href" className="section-href"></div>
-      <p
-        style={{
-          fontSize: "65px",
-          width: "230px",
-          marginLeft: "auto",
-          marginRight: "auto",
-          marginBottom: "30px",
-          marginTop: "50px"
-        }}
-        className="headingHighlighter"
-      >
-        .contact
-      </p>
+    <div>
+      <div id="contact-href" className="section-href"></div>
+      <p className="headingHighlighter contactWord">.contact</p>
       <div className="contactHeading">
         <h1 className="contactFirst">Send me a message!</h1>
         <p className="contactSecond">

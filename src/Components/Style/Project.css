@@ -1,6 +1,5 @@
 .projectContainer {
   display: flex;
-  /* grid-template-columns: 1.5fr 1fr; */
   padding: 20px;
   width: 65vw;
   height: 250px;
@@ -9,6 +8,7 @@
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
   border-radius: 40px;
   text-align: center;
+  font-size: 15px;
 }
 .projectImage {
   width: 400px;
@@ -31,4 +31,56 @@
   margin-left: 20px;
   margin-right: 20px;
   font-size: 25px;
+}
+.projectWord {
+  font-size: 65px;
+  width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px;
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 600px) {
+  .projectWord {
+    font-size: 25px;
+    width: 90px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .projectImage {
+    width: 300px;
+    height: fit-content;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+    border-radius: 40px;
+    padding: 10px;
+  }
+  .projectContainer {
+    display: block;
+    padding: 20px;
+    width: 75vw;
+    height: fit-content;
+    margin: auto;
+    background-color: white;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+    border-radius: 40px;
+    text-align: center;
+  }
+  .projectButton {
+    position: relative;
+    top: 25px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 18px;
+  }
+  .projectTech {
+    position: relative;
+    top: 10px;
+    margin-left: 10px;
+    font-size: 15px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+  }
 }

@@ -133,6 +133,7 @@ function ImageArea() {
       <div>
         <Project />
       </div>
+      {window.screen.width < 600 ? <hr width="350px" /> : <></>}
       <div>
         <Contact />
       </div>

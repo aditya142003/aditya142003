@@ -27,3 +27,34 @@
   height: 15px;
   width: 25%;
 }
+@media screen and (max-width: 600px) {
+  .footerContainer {
+    position: relative;
+    top: 100px;
+    width: 80vw;
+    margin-right: auto;
+    margin-left: auto;
+    height: 100px;
+    font-size: 15px;
+  }
+  .firstBlock {
+    background-color: #e45447;
+    height: 10px;
+    width: 25%;
+  }
+  .secondBlock {
+    background-color: #e29d51;
+    height: 10px;
+    width: 25%;
+  }
+  .thirdBlock {
+    background-color: #d8c7b8;
+    height: 10px;
+    width: 25%;
+  }
+  .forthBlock {
+    background-color: #607393;
+    height: 10px;
+    width: 25%;
+  }
+}

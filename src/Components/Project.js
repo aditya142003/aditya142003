@@ -43,19 +43,7 @@ function Project() {
   return (
     <div>
       <div id="project-href" className="section-href"></div>
-      <p
-        style={{
-          fontSize: "65px",
-          width: "250px",
-          marginLeft: "auto",
-          marginRight: "auto",
-          marginTop: "60px",
-          marginBottom: "30px",
-        }}
-        className="headingHighlighter"
-      >
-        .projects
-      </p>
+      <p className="headingHighlighter projectWord">.projects</p>
       {ProjectFetched.map((user) => (
         <div className="projectContainer">
           <img
@@ -65,7 +53,7 @@ function Project() {
           />
           <div style={{ margin: "15px" }}>
             <h3>{user.title}</h3>
-            {user.description.slice(0, 295) + "..."}
+            {user.description.slice(0, 150) + "..."}
             <div>
               {user.techStack.split(",").map((tech) => {
                 return <button className="projectTech">{tech}</button>;
