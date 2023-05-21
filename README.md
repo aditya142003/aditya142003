@@ -1,16 +1,24 @@
-# Getting Started with Create React App
+# Aditya Bhatnagar
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Passionate and skilled web developer specializing in crafting
+beautiful websites using the React.js framework. With a keen
+eye for design and a love for coding, I am constantly looking
+out for new technologies and trends in the ever-evolving
+market. I thrive on curiosity and find great excitement in
+exploring and adopting the latest tools and techniques to
+create engaging and dynamic web experiences.
 
-## Available Scripts
+### Resume: https://drive.google.com/file/d/12YSEdzzDXmNhYJPjnFeTcGE71rtc3Yc0/view?usp=share_link
 
-In the project directory, you can run:
+### Tecnologies
+##### Programming Languages: C, C++, JavaScript
+##### Libraries/Frameworks: React.js, Node.js, Express.js
+##### Tools/Platforms: Git, Firebase, VS Code
+##### Databases: MongoDB, MYSQL
 
-### `npm start`
+### Education
+###### B.Tech in Computer Science and Engineering (2021 - 2025)
+###### Swami Keshvanand Institute of Technology and Managment, Jaipur
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
