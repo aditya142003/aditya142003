@@ -3,7 +3,7 @@
   padding: 20px;
   width: 65vw;
   height: 250px;
-  margin: auto;
+  margin: 50px auto;
   background-color: white;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
   border-radius: 40px;
@@ -11,10 +11,10 @@
   font-size: 15px;
 }
 .projectImage {
-  width: 400px;
+  width: auto;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
   border-radius: 40px;
-  padding: 10px;
+  padding: 20px;
 }
 .projectTech {
   position: relative;
