@@ -8,7 +8,7 @@ market. I thrive on curiosity and find great excitement in
 exploring and adopting the latest tools and techniques to
 create engaging and dynamic web experiences.
 
-### Resume: https://drive.google.com/file/d/12YSEdzzDXmNhYJPjnFeTcGE71rtc3Yc0/view?usp=share_link
+### Resume: https://drive.google.com/file/d/1BlJvGjdIVtn8T-8vv4fvcmyrYg5Iev3U/view?usp=drivesdk
 
 ### Tecnologies
 ##### Programming Languages: C, C++, JavaScript
